@@ -2,13 +2,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:classes="using:Regex_Bushuev.Classes"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Regex_Bushuev.MainWindow"
+        x:CompileBindings="False"
         Title="Паспортный стол"
         Width="800" Height="450"
         MinWidth="800" MinHeight="450">
         <Grid>
-        <DataGrid x:Name="lv_passport"
+        <DataGrid 
+            x:Name="lv_passport"
+            x:DataType="classes:Passport"
             Margin="10,10,10,40"
             AutoGenerateColumns="False"
             IsReadOnly="True"
@@ -28,8 +32,8 @@
                 <DataGridTextColumn Header="Место рождения" Width="100" Binding="{Binding PlaceOfBirth}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Click="Add" Content="Добавить" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,10" Width="75" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Button Click="Update" Content="Изменить" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,90,10" Width="75" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Button Click="Delete" Content="Удалить" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,170,10" Width="75" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button Padding="0" Click="Add" Content="Добавить" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,10" Width="75" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button Padding="0" Click="Update" Content="Изменить" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,90,10" Width="75" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button Padding="0" Click="Delete" Content="Удалить" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,170,10" Width="75" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
     </Grid>
 </Window>
